@@ -13,16 +13,16 @@ jobs:
         include:
           - goos: linux
             goarch: amd64
-            output: gshark-linux-amd64
+            output: grelay-linux-amd64
           - goos: linux
             goarch: arm64
-            output: gshark-linux-arm64
+            output: grelay-linux-arm64
           - goos: windows
             goarch: amd64
-            output: gshark-windows-amd64.exe
+            output: grelay-windows-amd64.exe
           - goos: windows
             goarch: arm64
-            output: gshark-windows-arm64.exe
+            output: grelay-windows-arm64.exe
     steps:
       - uses: actions/checkout@v3
       
