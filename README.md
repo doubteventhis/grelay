@@ -20,8 +20,37 @@ also allows for session management (so it doesn't repeat successful relays) and 
 
 
 
-todo:
-- integrate with a dns poisoning tool (pretender) to dynamically whitelist hosts that do not have "interesting" users connecting from them. this is a kind of hairbrained idea to make a long running poisoning tool capable of dynamic targeting only hosts with privileged users connecting, without enumerating them with a separate tool first.
+# todo?
+- kerberos relaying
+- send fake type 2 SMB back to check what user is attempting authentication
+- support deny and allow lists for users
+  - tweak different actions on a per user basis (if admin, do this)
+- socks features
+  - max keep alive time on tunnels
+  - swap to tcp keep alives instead of ldap
+  - kill tunnel
+  - add target
+  - add up time to socks table
+  - add keep alive counter to socks table
+- integrate pretender or other dns poisoner somehow?
+  - support stop/start of pretender
+  - support auto dns poisoning blacklisting for known hosts/users. might allow tool to run for a long time to target specific users without knowing where they might come from?
+- starttls for ldap
+- relay to mssql
+- relay to winrm
+- change debug logging to include verbose logging
+  - probably remove debugging logging or just send it to a file
+- tweak wpad file contents
+  - ipv4, ipv6?
+- tweak automatic enum
+  - fix extra 302 after finding-ca
+  - change ca lookup to dns instead of ldap query?
+  - add auto sccm finder/realy?
+  - convert to bloodhound compatiable json dump
+  - move away from obclass=* query
+- remove/change error messages being sent to victims over http, change success message from 200
+- check ldap message structures mirror windows computers
+- chnage server useragent sent with http connections
 
 # credits 
 ntlmrelayx - https://github.com/fortra/impacket/blob/master/examples/ntlmrelayx.py
